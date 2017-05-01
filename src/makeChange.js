@@ -5,16 +5,16 @@ const makeChange = ({price, amountGiven}) => {
     return coinsCountObject
   } else {
     coinsCountObject.quarters = Math.floor(change/25)
-    let diff = coinsCountObject.quarters * 25
-    change -= diff
+    let different = coinsCountObject.quarters * 25
+    change -= different
 
     coinsCountObject.dimes = Math.floor(change/10)
-    diff = coinsCountObject.dimes * 10
-    change -= diff
+    different = coinsCountObject.dimes * 10
+    change -= different
 
     coinsCountObject.nickels = Math.floor(change/5)
-    diff = coinsCountObject.nickels * 5
-    change -= diff
+    different = coinsCountObject.nickels * 5
+    change -= different
 
     coinsCountObject.pennies = change/1
   }
