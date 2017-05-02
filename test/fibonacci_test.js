@@ -11,5 +11,8 @@ describe('fibonacci()', function(){
     expect(fibonacci(1)).to.be.a('array')
   })
 
-  
+  it('should give a proper array', function() {
+    expect(fibonacci(10)).to.deep.equal([ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ])
+  })
+
 })
