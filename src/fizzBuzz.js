@@ -1,17 +1,17 @@
 const fizzBuzz = () => {
-  let fizzBuzzArray = new Array()
-  for (let i = 1; i < 101; i++) {
+  const fizzBuzzArray = [];
+  for (let i = 1; i < 101; i += 1) {
     if (i % 3 === 0 && i % 5 === 0) {
-      fizzBuzzArray.push('FizzBuzz')
+      fizzBuzzArray.push('FizzBuzz');
     } else if (i % 3 === 0) {
-      fizzBuzzArray.push('Fizz')
+      fizzBuzzArray.push('Fizz');
     } else if (i % 5 === 0) {
-      fizzBuzzArray.push('Buzz')
+      fizzBuzzArray.push('Buzz');
     } else {
-      fizzBuzzArray.push(i)
+      fizzBuzzArray.push(i);
     }
   }
-  return fizzBuzzArray
-}
+  return fizzBuzzArray;
+};
 
-export default fizzBuzz
+export default fizzBuzz;

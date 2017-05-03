@@ -1,15 +1,14 @@
-import { expect } from 'chai'
-import fizzBuzz from '../src/fizzBuzz'
+import { expect } from 'chai';
+import fizzBuzz from '../src/fizzBuzz';
 
-describe('fizzBuzz()', function(){
+describe('fizzBuzz()', () => {
+  it('should be a function', () => {
+    expect(fizzBuzz).to.be.a('function');
+  });
 
-  it('should be a function', function(){
-    expect(fizzBuzz).to.be.a('function')
-  })
-
-  it('Return an array of numbers from 1 to 100. For multiples of three, use the string Fizz instead of the number and for multiples of five replace with Buzz. For numbers which are multiples of both three and five replace with FizzBuzz.)', function(){
-    const fizzyBuzzy = fizzBuzz()
-    expect(fizzyBuzzy).to.deep.equal([ 1,
+  it('Return an array of numbers from 1 to 100. For multiples of three, use the string Fizz instead of the number and for multiples of five replace with Buzz. For numbers which are multiples of both three and five replace with FizzBuzz.)', () => {
+    const fizzyBuzzy = fizzBuzz();
+    expect(fizzyBuzzy).to.deep.equal([1,
       2,
       'Fizz',
       4,
@@ -108,7 +107,7 @@ describe('fizzBuzz()', function(){
       97,
       98,
       'Fizz',
-      'Buzz'
-    ])
-  })
-})
+      'Buzz',
+    ]);
+  });
+});

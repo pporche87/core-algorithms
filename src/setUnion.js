@@ -1,6 +1,6 @@
 const setUnion = (firstSet, secondSet) => {
-  const resultSet = new Set([...firstSet, ...secondSet])
-  return Array.from(resultSet) 
-}
+  const resultSet = new Set([...firstSet, ...secondSet]);
+  return Array.from(resultSet);
+};
 
-export default setUnion
+export default setUnion;

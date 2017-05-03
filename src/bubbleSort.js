@@ -1,21 +1,21 @@
 const bubbleSort = (sortedArray) => {
   if (!Array.isArray(sortedArray)) {
-    return undefined
+    return undefined;
   }
-  let swapped
+  let swapped;
   do {
-    swapped = false
-    for (let i = 0; i < sortedArray.length; i++) {
+    swapped = false;
+    for (let i = 0; i < sortedArray.length; i += 1) {
       if (sortedArray[i] > sortedArray[i + 1]) {
-        let temp = sortedArray[i]
-        sortedArray[i] = sortedArray[i + 1]
-        sortedArray[i + 1] = temp
-        swapped = true
+        const temp = sortedArray[i];
+        sortedArray[i] = sortedArray[i + 1];
+        sortedArray[i + 1] = temp;
+        swapped = true;
       }
     }
   }
-  while (swapped)
-  return sortedArray
-}
+  while (swapped);
+  return sortedArray;
+};
 
-export default bubbleSort
+export default bubbleSort;
