@@ -1,5 +1,9 @@
 const fibonacci = (position) => {
   const answer = [0, 1];
+
+  if (!Number.isInteger(position) || position < 1) {
+    return undefined
+  }
   if (position === 1) {
     return [0];
   } else if (position === 2) {

@@ -2,6 +2,9 @@ const collatzConjecture = (number) => {
   let workingNumber = number;
   const workingArray = [];
 
+  if (!Number.isInteger(number)) {
+    return undefined
+  }
 
   if (number === 1) {
     return [1];

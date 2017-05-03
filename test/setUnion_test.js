@@ -19,8 +19,6 @@ describe('setUnion()', () => {
   });
 
   it('Will not try to evaluate empty things', () => {
-    expect(setUnion({}, {})).to.equal(undefined);
-    expect(setUnion([], [])).to.equal(undefined);
     expect(setUnion('', '')).to.equal(undefined);
   });
 });

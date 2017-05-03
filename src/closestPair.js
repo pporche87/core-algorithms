@@ -3,6 +3,10 @@ const closestPair = (coordinateSet) => {
   answer.pair = [];
   answer.distance = Infinity;
 
+  if (coordinateSet.length === 1) {
+    return undefined
+  }
+
   for (let i = 0; i < coordinateSet.length - 1; i += 1) {
     const compare = coordinateSet[i];
     for (let j = i + 1; j < coordinateSet.length; j += 1) {

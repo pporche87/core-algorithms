@@ -30,9 +30,8 @@ describe('collatzConjecture()', () => {
       1]);
   });
 
-  it('should not try to evaluate empty things', () => {
-    expect(collatzConjecture({})).to.equal(undefined);
-    expect(collatzConjecture('')).to.equal(undefined);
-    expect(collatzConjecture([])).to.equal(undefined);
+  it('should not evaluate non-numerical values', () => {
+    expect(collatzConjecture('string')).to.equal(undefined);
+    expect(collatzConjecture(['string'])).to.equal(undefined);
   });
 });
