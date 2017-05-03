@@ -17,4 +17,8 @@ describe('closestPair()', () => {
     [5, 3], [-2, 5], [3, -6], [-2, 0], [3, 4], [5, -4], [0, -2]];
     expect(closestPair(points)).to.deep.equal({ pair: [[4, 0], [4, 0]], distance: 0 });
   });
+
+  it('Will not try to execute when only given one thing', () => {
+    expect(closestPair([[1, 1]])).to.equal(undefined || NaN);
+  });
 });

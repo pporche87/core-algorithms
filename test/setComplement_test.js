@@ -17,4 +17,10 @@ describe('setComplement()', () => {
     const secondSet = [6, 7, 8, 9];
     expect(setComplement(firstSet, secondSet)).to.deep.equal([7, 8]);
   });
+
+  it('Will not try to evaluate empty things', () => {
+    expect(setComplement({}, {})).to.equal(undefined);
+    expect(setComplement([], [])).to.equal(undefined);
+    expect(setComplement('', '')).to.equal(undefined);
+  });
 });

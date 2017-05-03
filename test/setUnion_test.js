@@ -17,4 +17,10 @@ describe('setUnion()', () => {
     const secondSet = [6, 7, 8, 9];
     expect(setUnion(firstSet, secondSet)).to.deep.equal([3, 6, 9, 12, 7, 8]);
   });
+
+  it('Will not try to evaluate empty things', () => {
+    expect(setUnion({}, {})).to.equal(undefined);
+    expect(setUnion([], [])).to.equal(undefined);
+    expect(setUnion('', '')).to.equal(undefined);
+  });
 });

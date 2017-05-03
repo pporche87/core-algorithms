@@ -13,4 +13,19 @@ describe('fibonacci()', () => {
   it('should give a proper array', () => {
     expect(fibonacci(10)).to.deep.equal([0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
   });
+
+  it('should stop you if you hand it a float or a really big number', () => {
+    expect(fibonacci(3.14)).to.equal(undefined);
+    expect(fibonacci(99999999999)).to.equal(undefined);
+  });
+
+  it('should not try to run the function with the values of empty things', () => {
+    expect(fibonacci({})).to.equal(undefined);
+    expect(fibonacci('')).to.equal(undefined);
+    expect(fibonacci([])).to.equal(undefined);
+  });
+
+  it('should not let you plug in negitive integers', () => {
+    expect(fibonacci(-5)).to.equal(undefined);
+  });
 });
