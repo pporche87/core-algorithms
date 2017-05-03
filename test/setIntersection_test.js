@@ -17,4 +17,10 @@ describe('setIntersection()', () => {
     const secondSet = [6, 7, 8, 9];
     expect(setIntersection(firstSet, secondSet)).to.deep.equal([6, 9]);
   });
+
+  it('Will not try to evaluate empty things', () => {
+    expect(setIntersection({}, {})).to.equal(undefined);
+    expect(setIntersection([], [])).to.equal(undefined);
+    expect(setIntersection('', '')).to.equal(undefined);
+  });
 });

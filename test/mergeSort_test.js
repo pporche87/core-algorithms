@@ -28,4 +28,8 @@ describe('mergeSort()', () => {
       4,
       10])).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
+
+  it('Will not try to execute on unsortable things', () => {
+    expect(mergeSort([{}, [[], ['lol']], null, undefined, 'just put literally an empty string', Infinity]));
+  });
 });

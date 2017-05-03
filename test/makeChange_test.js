@@ -6,6 +6,12 @@ describe('makeChange()', () => {
     expect(makeChange).to.be.a('function');
   });
 
+  it('should kick back something consistent when not handed something it can work with', () => {
+    expect(makeChange({})).to.equal(undefined);
+    expect(makeChange('')).to.equal(undefined);
+    expect(makeChange(['boiled ham'])).to.equal(undefined);
+  });
+
   it('returns an object with all coin types (quarters, dimes, nickels, and pennies)', () => {
     const change = makeChange({ price: 100, amountGiven: 100 });
     expect(change).to.be.an('object');

@@ -29,4 +29,10 @@ describe('collatzConjecture()', () => {
       2,
       1]);
   });
+
+  it('should not try to evaluate empty things', () => {
+    expect(collatzConjecture({})).to.equal(undefined);
+    expect(collatzConjecture('')).to.equal(undefined);
+    expect(collatzConjecture([])).to.equal(undefined);
+  });
 });

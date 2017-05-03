@@ -17,4 +17,10 @@ describe('setSymmetricDifference()', () => {
     const secondSet = [6, 7, 8, 9];
     expect(setSymmetricDifference(firstSet, secondSet)).to.deep.equal([3, 12, 7, 8]);
   });
+
+  it('Will not try to evaluate empty things', () => {
+    expect(setSymmetricDifference({}, {})).to.equal(undefined);
+    expect(setSymmetricDifference([], [])).to.equal(undefined);
+    expect(setSymmetricDifference('', '')).to.equal(undefined);
+  });
 });
