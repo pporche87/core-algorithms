@@ -19,8 +19,6 @@ describe('setSymmetricDifference()', () => {
   });
 
   it('Will not try to evaluate empty things', () => {
-    expect(setSymmetricDifference({}, {})).to.equal(undefined);
-    expect(setSymmetricDifference([], [])).to.equal(undefined);
     expect(setSymmetricDifference('', '')).to.equal(undefined);
   });
 });

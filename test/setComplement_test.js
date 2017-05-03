@@ -19,8 +19,6 @@ describe('setComplement()', () => {
   });
 
   it('Will not try to evaluate empty things', () => {
-    expect(setComplement({}, {})).to.equal(undefined);
-    expect(setComplement([], [])).to.equal(undefined);
     expect(setComplement('', '')).to.equal(undefined);
   });
 });

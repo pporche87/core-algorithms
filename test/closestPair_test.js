@@ -19,6 +19,6 @@ describe('closestPair()', () => {
   });
 
   it('Will not try to execute when only given one thing', () => {
-    expect(closestPair([[1, 1]])).to.equal(undefined || NaN);
+    expect(closestPair([[1, 1]])).to.equal(undefined);
   });
 });

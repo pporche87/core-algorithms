@@ -19,8 +19,6 @@ describe('setIntersection()', () => {
   });
 
   it('Will not try to evaluate empty things', () => {
-    expect(setIntersection({}, {})).to.equal(undefined);
-    expect(setIntersection([], [])).to.equal(undefined);
     expect(setIntersection('', '')).to.equal(undefined);
   });
 });
