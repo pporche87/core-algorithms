@@ -5,7 +5,7 @@ const checkIfPalindrome = (reversed, original) => {
   return false;
 };
 
-const palindrome = (palindromeString) => {
+const isPalindrome = (palindromeString) => {
   const punctuationCompareString = palindromeString.replace(/[\W_]+/g, '').toLowerCase();
   const reversedPunctuationString = punctuationCompareString.split(' ').reverse().join('');
 
@@ -16,4 +16,4 @@ const palindrome = (palindromeString) => {
   return checkIfPalindrome(reversedString, palindromeString);
 };
 
-export default palindrome;
+export default isPalindrome;
