@@ -164,8 +164,8 @@ describe('mergeSort()', () => {
 - [x] Tests for mergeSort() exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
 - [x] closestPair() algorithm is implemented according to the description in algorithms.md.
 - [x] Tests for closestPair() exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
-- [ ] isConnectedGraph() algorithm is implemented according to the description in algorithms.md.
-- [ ] Tests for isConnectedGraph() exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
+- [x] isConnectedGraph() algorithm is implemented according to the description in algorithms.md.
+- [x] Tests for isConnectedGraph() exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
 - [x] Repository includes a README file with basic installation and setup instructions.
 - [x] All dependencies are properly declared in package.json.
 - [x] All major features are added via pull requests with a clear description and concise commit messages.
