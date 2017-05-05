@@ -1,4 +1,4 @@
-
+//you can avoid using global variables by
 let visitedPoints = []
 const traverseGraph = (graphPoint, pathToGraphKeys) => {
   visitedPoints.push(graphPoint)
@@ -29,9 +29,9 @@ const isConnectedGraph = (graph) => {
   graphPoints.forEach(graphPoint => {
     if (!visitedPoints.includes(graphPoint)) {
       resultArray.push(false)
-      } else {
+    } else {
       resultArray.push(true)
-      }
+    }
   })
   if (resultArray.includes(false)) {
     resultArray = []
