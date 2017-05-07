@@ -1,7 +1,8 @@
+//there could possibly be a more concise designation for this function, maybe isGraphConnected
 export default function nestedCheckIsConnected(pointsSet) {
+  //since your param being passed into the function is called pointsSet maybe a different name for this constant would add readability, maybe paths
   const points = Object.keys(pointsSet);
-  const traversed = [];
-  traversed.push(points[0]);
+  const traversed = [points[0]]
 
   for (let i = 0; i < points.length; i += 1) {
     for (let j = 0; j < pointsSet[points[i]].length; j += 1) {
@@ -15,8 +16,10 @@ export default function nestedCheckIsConnected(pointsSet) {
       }
     }
   }
+  //overall these for loops are not sustainable, but I know you are on the right track, really use the 3 arguments you get in the for loop, there is a lot of cool things that get overlooked such as calling functions in them
   const sortedTraversed = traversed.sort()
   const sortedPoints = points.sort()
+  //I really like what this is doing, don't often see every used, even though it makes such intuitive sense. Nice work
   let isSameAnswer = (sortedTraversed.length === sortedPoints.length) &&
   sortedTraversed.every(function (element, index) {
     return element === sortedPoints[index]
